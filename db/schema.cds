@@ -2,6 +2,9 @@ namespace capservice.schema;
 
 using { cuid, managed } from '@sap/cds/common';
 
+@restrict: [
+        { grant: '*', to: 'Admin' },
+        { grant: ['READ','WRITE'], to: 'CustomerManager' }]
 entity customers : cuid, managed {
     customerId   : String(10);
     name         : String(100);
@@ -13,6 +16,9 @@ entity customers : cuid, managed {
                    on orders.customer = $self;
 }
 
+@restrict: [
+        { grant: '*', to: 'Admin' },
+        { grant: ['READ','WRITE'], to: 'CustomerManager' }]
 entity customerOrders : cuid, managed {
     orderNo      : String(20);
     orderDate    : Date;
@@ -22,6 +28,9 @@ entity customerOrders : cuid, managed {
     customer     : Association to customers;
 }
 
+@restrict: [
+        { grant: '*', to: 'Admin' },
+        { grant: ['READ','WRITE'], to: 'SupplierManager' }]
 entity suppliers : cuid, managed {
     supplierId   : String(10);
     name         : String(100);
@@ -32,6 +41,9 @@ entity suppliers : cuid, managed {
                    on products.supplier = $self;
 }
 
+@restrict: [
+        { grant: '*', to: 'Admin' },
+        { grant: ['READ','WRITE'], to: 'SupplierManager' }]
 entity supplierProducts : cuid, managed {
     productId    : String(20);
     productName  : String(100);

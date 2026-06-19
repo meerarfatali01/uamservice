@@ -2,6 +2,30 @@
   "xsappname": "uamservice",
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
-  "scopes": [],
-  "role-templates": []
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin"
+    },
+    {
+      "name": "$XSAPPNAME.CustomerManager",
+      "description": "CustomerManager"
+    },
+    {
+      "name": "$XSAPPNAME.SupplierManager",
+      "description": "SupplierManager"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Admin", "description": "Admin", "scope-references": [ "$XSAPPNAME.Admin" ]
+    },
+    {
+      "name": "CustomerManager", "description": "CustomerManager", "scope-references": [ "$XSAPPNAME.CustomerManager" ]
+    },
+    {
+      "name": "SupplierManager", "description": "SupplierManager", "scope-references": [ "$XSAPPNAME.SupplierManager" ]
+    }
+  ],
+  "attributes": []
 }
