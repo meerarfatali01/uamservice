@@ -1,7 +1,7 @@
 using capservice.schema as db from '../db/schema';
 
 // @requires: 'authenticated-user'
-service CatalogService {
+service uamservice {
 
     // action hello() returns {
     //     message : String;
