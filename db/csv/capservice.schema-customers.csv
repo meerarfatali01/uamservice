@@ -1,0 +1,4 @@
+ID,customerId,name,email,phone,city
+11111111-1111-1111-1111-111111111111,C1001,ABC Retail,abc@retail.com,9999991111,Hyderabad
+11111111-1111-1111-1111-111111111112,C1002,Global Stores,global@stores.com,9999992222,Bangalore
+11111111-1111-1111-1111-111111111113,C1003,Tech Mart,tech@mart.com,9999993333,Chennai
